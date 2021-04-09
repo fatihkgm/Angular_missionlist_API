@@ -1,4 +1,40 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="Fatih" />
+    <link
+      rel="icon"
+      href="images/blogs/iconme.png"
+      type="image/gif"
+      sizes="16x16"
+    />
 
+    <title>FELIX GOKMEN</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap core CSS -->
+
+    <!-- Custom styles for this template -->
+  </head>
+
+  <body>
     <header>
       <!-- Fixed navbar -->
 
@@ -61,56 +97,89 @@
       </nav>
     </header>
 
-<h1 class="card-body">SpaceX Launch</h1>
-<div class="container">
-
-  <div class="row">
-    <div class="col-md-12">
-
-    </div>
-    <div class="col-md-4">
-      <aside class="filter-section-wrapper">
-        <div class="card">
-          <div class="card-body">
-            <div class="filter-header-wrap">
-              <h3 >Find the Rockets</h3>
-              <a *ngIf="showFilter" (click)="clearFilter()">Clear</a>
+    <h1 class="card-body">SpaceX Launch</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12"></div>
+        <div class="col-md-4">
+          <aside class="filter-section-wrapper">
+            <div class="card">
+              <div class="card-body">
+                <div class="filter-header-wrap">
+                  <h3>Find the Rockets</h3>
+                  <a *ngIf="showFilter" (click)="clearFilter()">Clear</a>
+                </div>
+                <div class="filter-sub-title">
+                  <h4>Rocket Mission Name</h4>
+                </div>
+                <ul class="filter-buttons">
+                  <li
+                    *ngFor="let name of spaceName; let i = index"
+                    (click)="filterLaunchPrograms(i, name)"
+                  >
+                    {{ name }}
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div class="filter-sub-title">
-              <h4>Rocket Mission Name</h4>
-            </div>
-            <ul class="filter-buttons">
-              <li
-                *ngFor="let name of spaceName; let i = index"
-                (click)="filterLaunchPrograms(i, name)"
-              >
-                {{ name }}
-              </li>
-            </ul>
-          </div>
+          </aside>
         </div>
-      </aside>
-    </div>
-    <div class="col-md-8">
-      <p *ngIf="isLoading" class="loading-text">Loading...</p>
-      <p
-        *ngIf="launchDataArray && !launchDataArray.length && !isLoading"
-        class="loading-text"
-      >
-        No Data Found!
-      </p>
-      <div *ngIf="!isLoading" class="row">
-        <div *ngFor="let item of launchDataArray" class="col-md-4">
-          <app-missiondetail [data]="item"></app-missiondetail>
+        <div class="col-md-8">
+          <p *ngIf="isLoading" class="loading-text">Loading...</p>
+          <p
+            *ngIf="launchDataArray && !launchDataArray.length && !isLoading"
+            class="loading-text"
+          >
+            No Data Found!
+          </p>
+          <div *ngIf="!isLoading" class="row">
+            <div *ngFor="let item of launchDataArray" class="col-md-4">
+              <app-missiondetail [data]="item"></app-missiondetail>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
-<footer class="footer text-center ">
-  <div class="container dark">
-    <span>Made  with  <span class="fab fa-canadian-maple-leaf"></span> | <a href="https://fgokmen.herokuapp.com/">the KGM</a> |<span class="fab fa-canadian-maple-leaf"></span> 2021.</span>
-  </div>
-</footer>
+    <footer class="footer text-center">
+      <div class="container dark">
+        <span
+          >Made with <span class="fab fa-canadian-maple-leaf"></span> |
+          <a href="https://fgokmen.herokuapp.com/">the KGM</a> |<span
+            class="fab fa-canadian-maple-leaf"
+          ></span>
+          2021.</span
+        >
+      </div>
+    </footer>
 
-
+    <!-- Bootstrap core JavaScript
+================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      window.jQuery ||
+        document.write(
+          '<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>'
+        );
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
