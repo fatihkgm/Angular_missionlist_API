@@ -20,3 +20,5 @@ ng generate component missiondetails --module=app.module.ts
 npm install bootstrap --save
 
 ng generate component missiondetails --module=app.module.ts
+
+ng generate service app
