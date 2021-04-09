@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from '../app.service';
 
 @Component({
   selector: 'app-missiondetails',
@@ -23,7 +24,43 @@ export class MissiondetailsComponent implements OnInit {
     '2019',
     '2020',
   ];
-  constructor() {}
+  constructor(private appService:AppService) {}
 
   ngOnInit(): void {}
+
+  getAllLaunches(): any {
+    this.isLoading = true;
+    this.appService.getAllLaunches()
+    .subscribe((response: any) => {
+      // console.log(response);
+      this.launchDataArray = response;
+      this.isLoading = false;
+    }, err => {
+      console.log(err);
+      this.isLoading = false;
+    })
+  }
+
+  filterLaunchPrograms(index: number, year: string): any {
+    // console.log(index, year);
+    this.getFilteredLaunches(year);
+    this.launchYearSelectedIndex = index;
+    this.showFilter = true;
+  }
+
+  getFilteredLaunches(year: string): any {
+    this.appService.getLaunchesByYear(year)
+    .subscribe((response: any) => {
+      // console.log(response);
+      this.launchDataArray = response;
+    }, err => {
+      console.log(err);
+    })
+  }
+
+  clearFilter(): void {
+    this.getAllLaunches();
+    this.launchYearSelectedIndex = null;
+    this.showFilter = false;
+  }
 }
