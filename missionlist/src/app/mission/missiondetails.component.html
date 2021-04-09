@@ -8,13 +8,13 @@
         <div class="card">
           <div class="card-body">
             <div class="filter-header-wrap">
-              <h3 class="filter-sub-title" >Find the Rockets</h3>
-              <a *ngIf="showFilter" (click)="clearFilter()">Clear filter</a>
+              <h3 >Find the Rockets</h3>
+              <a *ngIf="showFilter" (click)="clearFilter()">Clear</a>
             </div>
             <div class="filter-sub-title">
               <h4>Rocket Mission Name</h4>
             </div>
-            <ul class="filter-buttons">
+            <ul class="filter">
               <li
                 *ngFor="let name of spaceName; let i = index"
                 (click)="filterLaunchPrograms(i, name)"
