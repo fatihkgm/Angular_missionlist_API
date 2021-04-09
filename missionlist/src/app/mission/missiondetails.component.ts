@@ -26,7 +26,9 @@ export class MissiondetailsComponent implements OnInit {
   ];
   constructor(private appService:AppService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getAllLaunches();
+  }
 
   getAllLaunches(): any {
     this.isLoading = true;
