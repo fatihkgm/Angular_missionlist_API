@@ -1,11 +1,11 @@
 import { Component, OnInit,Input,OnChanges } from '@angular/core';
 
 @Component({
-  selector: 'app-missiondetails',
+  selector: 'app-missiondetail',
   templateUrl: './missiondetails.component.html',
   styleUrls: ['./missiondetails.component.css']
 })
-export class MissiondetailsComponent implements OnInit ,OnChanges{
+export class MissionComponent implements OnInit ,OnChanges{
   @Input() data: any;
   constructor() { }
 
@@ -13,7 +13,12 @@ export class MissiondetailsComponent implements OnInit ,OnChanges{
   }
 
   ngOnChanges() {
-   
+
   }
 
 }
+
+
+
+
+

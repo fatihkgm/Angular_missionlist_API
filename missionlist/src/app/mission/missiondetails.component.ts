@@ -26,7 +26,7 @@ export class MissiondetailsComponent implements OnInit {
   ];
   launchDataArray = [];
   isLoading = false;
-  launchYearSelectedIndex: number;
+
   showFilter = false;
 
   constructor(private appService: AppService) {}
@@ -53,7 +53,6 @@ export class MissiondetailsComponent implements OnInit {
   filterLaunchPrograms(index: number, year: string): any {
     // console.log(index, year);
     this.getFilteredLaunches(year);
-    this.launchYearSelectedIndex = index;
     this.showFilter = true;
   }
 
@@ -71,7 +70,7 @@ export class MissiondetailsComponent implements OnInit {
 
   clearFilter(): void {
     this.getAllLaunches();
-    this.launchYearSelectedIndex = null;
+
     this.showFilter = false;
   }
 }
