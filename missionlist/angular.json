@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "missionlist-ssr": {
+    "missionlist": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/missionlist-ssr",
+            "outputPath": "dist/missionlist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -65,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "missionlist-ssr:build"
+            "browserTarget": "missionlist:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "missionlist-ssr:build:production"
+              "browserTarget": "missionlist:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "missionlist-ssr:build"
+            "browserTarget": "missionlist:build"
           }
         },
         "test": {
@@ -113,16 +113,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "missionlist-ssr:serve"
+            "devServerTarget": "missionlist:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "missionlist-ssr:serve:production"
+              "devServerTarget": "missionlist:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "missionlist-ssr"
+  "defaultProject": "missionlist"
 }
