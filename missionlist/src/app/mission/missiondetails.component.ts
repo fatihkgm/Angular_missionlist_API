@@ -8,21 +8,31 @@ import { AppService } from '../app.service';
 })
 export class MissiondetailsComponent implements OnInit {
   spaceName = [
-    '2006',
-    '2007',
-    '2008',
-    '2009',
-    '2010',
-    '2011',
-    '2012',
-    '2013',
-    '2014',
-    '2015',
-    '2016',
-    '2017',
-    '2018',
-    '2019',
-    '2020',
+    'FalconSat',
+    'DemoSat',
+    'Trailblazer',
+    'RatSat',
+    'RazakSat',
+    'Falcon 9 Test Flight',
+    'COTS 1',
+    'COTS 2',
+    'CRS-1',
+    'CRS-1',
+    'CASSIOPE',
+    'SES-8',
+    'Thaicom 6',
+    'OG-2 Mission 1',
+    'AsiaSat 8',
+    'AsiaSat 6',
+    'AsiaSat 8',
+    'CRS-4',
+    'CRS-5',
+    'DSCOVR',
+    'ABS-3A / Eutelsat 115W B',
+    'TürkmenÄlem 52°E / MonacoSAT',
+    'CRS-7',
+    'OG-2 Mission 2',
+    'Jason 3',
   ];
   launchDataArray = [];
   isLoading = false;
@@ -50,16 +60,16 @@ export class MissiondetailsComponent implements OnInit {
     );
   }
 
-  filterLaunchPrograms(index: number, year: string): any {
-    // console.log(index, year);
-    this.getFilteredLaunches(year);
+  filterLaunchPrograms(index: number, name: string): any {
+
+    this.getFilteredLaunches(name);
     this.showFilter = true;
   }
 
-  getFilteredLaunches(year: string): any {
-    this.appService.getLaunchesByYear(year).subscribe(
+  getFilteredLaunches(name: string): any {
+    this.appService.getLaunchesByYear(name).subscribe(
       (response: any) => {
-        // console.log(response);
+
         this.launchDataArray = response;
       },
       (err) => {

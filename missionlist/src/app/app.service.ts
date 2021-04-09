@@ -13,6 +13,8 @@ export class AppService {
   }
 
   public getLaunchesByYear(year: string): Observable<any> {
-    return this.http.get(`https://api.spaceXdata.com/v3/launches?limit=100&launch_year=${year}`);
+    return this.http.get(`https://api.spaceXdata.com/v3/launches?limit=100&mission_name=${year}`);
   }
 }
+
+

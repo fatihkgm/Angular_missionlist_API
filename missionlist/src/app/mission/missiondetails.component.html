@@ -8,18 +8,18 @@
         <div class="card">
           <div class="card-body">
             <div class="filter-header-wrap">
-              <h3>Filters</h3>
+              <h3 class="filter-sub-title" >Find the Rockets</h3>
               <a *ngIf="showFilter" (click)="clearFilter()">Clear filter</a>
             </div>
             <div class="filter-sub-title">
-              <h4>Launch Year</h4>
+              <h4>Rocket Mission Name</h4>
             </div>
             <ul class="filter-buttons">
               <li
-                *ngFor="let year of spaceName; let i = index"
-                (click)="filterLaunchPrograms(i, year)"
+                *ngFor="let name of spaceName; let i = index"
+                (click)="filterLaunchPrograms(i, name)"
               >
-                {{ year }}
+                {{ name }}
               </li>
             </ul>
           </div>
