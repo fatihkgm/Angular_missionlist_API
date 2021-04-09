@@ -15,9 +15,13 @@
               <h4>Launch Year</h4>
             </div>
             <ul class="filter-buttons">
-              <li  *ngFor="let year of launchYears; let i = index" (click)="filterLaunchPrograms(i, year)">{{year}}</li>
-          </ul>
-
+              <li
+                *ngFor="let year of spaceName; let i = index"
+                (click)="filterLaunchPrograms(i, year)"
+              >
+                {{ year }}
+              </li>
+            </ul>
           </div>
         </div>
       </aside>

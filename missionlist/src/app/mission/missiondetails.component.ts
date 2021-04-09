@@ -7,7 +7,7 @@ import { AppService } from '../app.service';
   styleUrls: ['./missiondetails.component.css'],
 })
 export class MissiondetailsComponent implements OnInit {
-  launchYears = [
+  spaceName = [
     '2006',
     '2007',
     '2008',
