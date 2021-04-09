@@ -30,6 +30,8 @@ export class MissiondetailsComponent implements OnInit {
     'DSCOVR',
     'ABS-3A / Eutelsat 115W B',
     'TürkmenÄlem 52°E / MonacoSAT',
+    'Starlink-10 (v1.0) & SkySat 19-21',
+    'Iridium NEXT Mission 8',
   ];
   launchDataArray = [];
   isLoading = false;
@@ -58,7 +60,6 @@ export class MissiondetailsComponent implements OnInit {
   }
 
   filterLaunchPrograms(index: number, name: string): any {
-
     this.getFilteredLaunches(name);
     this.showFilter = true;
   }
@@ -66,7 +67,6 @@ export class MissiondetailsComponent implements OnInit {
   getFilteredLaunches(name: string): any {
     this.appService.getLaunchesByYear(name).subscribe(
       (response: any) => {
-
         this.launchDataArray = response;
       },
       (err) => {

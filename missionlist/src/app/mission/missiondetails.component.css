@@ -1,5 +1,5 @@
 h1 {
-  color: #fff;
+  color: rgb(248, 1, 1);
 }
 
 .filter-header-wrap {
@@ -49,19 +49,20 @@ h1 {
 
 .filter-buttons li {
   margin-top: 10px;
-  flex-basis: 35%;
-  background: #007bff;
+  flex-basis: 20%;
+  background: #f54764;
   color: #fff;
-  padding: 10px;
+  padding: 3px;
   border-radius: 5px;
-  width: 36%;
+  width: 50px;
   display: inline-block;
-  margin-bottom: 10px;
+  margin-bottom: 2px;
   text-align: center;
   cursor: pointer;
   transition: all ease 0.2s;
   font-weight: 500;
   letter-spacing: 0;
+  margin: 2px;
 }
 
 .filter-buttons li:hover {
