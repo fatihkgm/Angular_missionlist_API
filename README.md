@@ -18,3 +18,5 @@ npm run serve:ssr
 ng generate component missiondetails --module=app.module.ts
 
 npm install bootstrap --save
+
+ng generate component missiondetails --module=app.module.ts
