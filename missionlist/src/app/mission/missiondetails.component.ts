@@ -30,9 +30,6 @@ export class MissiondetailsComponent implements OnInit {
     'DSCOVR',
     'ABS-3A / Eutelsat 115W B',
     'TürkmenÄlem 52°E / MonacoSAT',
-    'CRS-7',
-    'OG-2 Mission 2',
-    'Jason 3',
   ];
   launchDataArray = [];
   isLoading = false;
