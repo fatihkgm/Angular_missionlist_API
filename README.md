@@ -14,3 +14,5 @@ ng add @nguniversal/express-engine
 npm run dev:ssr   
 
 npm run serve:ssr 
+
+ng generate component missiondetails --module=app.module.ts
