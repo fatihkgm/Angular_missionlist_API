@@ -26,7 +26,7 @@
           <p *ngIf="launchDataArray && !launchDataArray.length && !isLoading" class="loading-text">No Data Found!</p>
           <div *ngIf="!isLoading" class="row">
               <div *ngFor="let item of launchDataArray" class="col-md-4">
-                  <app-launch-details-card [data]="item"></app-launch-details-card>
+                  <app-missiondetails [data]="item"></app-missiondetails>
               </div>
           </div>
       </div>
