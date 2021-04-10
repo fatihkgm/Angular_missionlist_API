@@ -4,7 +4,7 @@
 <p align="center">Angular Application
 </p>
 
-![ban](https://i.ibb.co/TPn0XJk/Dragon-Carousel-0007-2-0.jpg)
+![ban](https://i.ibb.co/ssWwC0Q/Clean-Work-Place-Linked-In-Banner.png)
 
 <p align="center">SpaceX launces using given REST API endpoint.</p>
 
@@ -24,5 +24,3 @@ Run ng build or npm run build:ssr to build the project. The build artifacts will
 
 Lint error check
 Run npm run lint to check for any lint errors.
-
-
