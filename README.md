@@ -24,3 +24,6 @@ Run ng build or npm run build:ssr to build the project. The build artifacts will
 
 Lint error check
 Run npm run lint to check for any lint errors.
+
+
+![ban](https://i.ibb.co/R7Wd3JY/spacex.gif)
