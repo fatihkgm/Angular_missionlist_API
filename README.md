@@ -4,7 +4,7 @@
 <p align="center">Angular Application
 </p>
 
-![ban](https://i.ibb.co/ssWwC0Q/Clean-Work-Place-Linked-In-Banner.png)
+![ban](https://i.ibb.co/nDZXZbc/spacexxx.png)
 
 <p align="center">SpaceX launces using given REST API endpoint.</p>
 
