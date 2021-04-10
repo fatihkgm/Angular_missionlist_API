@@ -4,11 +4,8 @@
 </p>
 
 ![ban](https://user-images.githubusercontent.com/63836841/113341004-a012d480-92fa-11eb-94d3-e0f249177aab.gif)
-<p align="center">Developer with 3+ years of experience in designing and developing user interfaces,testing,
-debugging and building eCommerce technologies.Comprehensive knowledge of Software Development Life Cycle has 
-a thorough understanding of various phases like Requirements,Analysis/Design, Development and Testing. Proficient 
-in object-oriented design,database designing,data structures, problem-solving, complexity analysis and debugging. 
-Designed and Developed custom WordPress themes and plugins.</p>
+<p align="center">SpaceX launces using given REST API endpoint.</p>
+<p align="center">https://api.spacexdata.com/v3/launches</p>
 
 SaceX launces using given REST API
 
