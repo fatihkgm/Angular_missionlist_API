@@ -1,36 +1,74 @@
-<body>
-<div class="launch-card">
-  <div class="card">
-    <div class="card-body">
-      <figure>
-        <img
-          src="{{ data.links.mission_patch_small }}"
-          alt="{{ data.rocket.rocket_name }}"
-        />
-      </figure>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="Fatih" />
+    <link
+      rel="icon"
+      href="images/blogs/iconme.png"
+      type="image/gif"
+      sizes="16x16"
+    />
 
-      <h5>{{ data.mission_name }}</h5>
+    <title>Authentication NodeJS</title>
 
-      <ul>
-        <li>
-          <h6><strong>Rocket: </strong> {{ data.rocket.rocket_name }}</h6>
-        </li>
-        <li>
-          <h6>
-            <strong>Launch: </strong> <span>{{ data.launch_year }}</span>
-          </h6>
-        </li>
-        <li>
-          <h6 class="text">
-            <strong>Details: </strong
-            ><span
-            class="fifty-chars"
-              >{{ data.details }}</span
-            >
-          </h6>
-        </li>
-      </ul>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap core CSS -->
+
+    <!-- Custom styles for this template -->
+  </head>
+
+  <body>
+    <div class="launch-card">
+      <div class="card">
+        <div class="card-body">
+          <figure>
+            <img
+              src="{{ data.links.mission_patch_small }}"
+              alt="{{ data.rocket.rocket_name }}"
+            />
+          </figure>
+
+          <h5>{{ data.mission_name }}</h5>
+
+          <ul>
+            <li>
+              <p><strong>Name: </strong> {{ data.rocket.rocket_name }}</p>
+            </li>
+            <li>
+              <p>
+                <strong> <i class="fas fa-rocket"> &nbsp; &nbsp;</i></strong> <span>{{ data.launch_year }}</span>
+              </p>
+            </li>
+            <li>
+              <p class="text">
+                <strong>Details: </strong
+                ><span class="fifty-chars">{{ data.details }}</span>
+              </p>
+            </li>
+            <li>More Info on SpaceX <br /></li>
+            <i class="far fa-file"></i
+            > &nbsp; &nbsp;<i class="far fa-play-circle"></i
+            > &nbsp; &nbsp;<i class="fas fa-globe-europe"></i>
+          </ul>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-</body>
+  </body>
+</html>
